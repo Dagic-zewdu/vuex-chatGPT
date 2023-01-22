@@ -1,9 +1,11 @@
 <template>
-  <div> </div>
+  <h1>Todos</h1>
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'TodosItem',
+};
 </script>
 
 <style lang="css" scoped>

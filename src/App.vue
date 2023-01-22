@@ -1,13 +1,13 @@
 <template>
-  <Todos />
+  <TodosItem />
 </template>
 
 <script>
-import Todos from './components/Todos.vue';
+import TodosItem from './components/TodosItem.vue';
 export default {
   name: 'App',
   components: {
-    Todos,
+    TodosItem,
   },
 };
 </script>
