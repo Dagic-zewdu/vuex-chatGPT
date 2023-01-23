@@ -1,10 +1,20 @@
 <template>
-  <h1>Todos</h1>
+  <div v-for="todo in allTodos" :key="todo.id" class="">
+    <h1 class="">{{ todo.title }}</h1>
+  </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex';
 export default {
   name: 'TodosItem',
+  computed: mapGetters(['allTodos']),
+  methods: {
+    ...mapActions(['fetchTodosAsync']),
+  },
+  created() {
+    this.fetchTodosAsync();
+  },
 };
 </script>
 
